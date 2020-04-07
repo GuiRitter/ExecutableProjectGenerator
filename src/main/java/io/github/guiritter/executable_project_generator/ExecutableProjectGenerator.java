@@ -145,7 +145,7 @@ public class ExecutableProjectGenerator{
 						StandardOpenOption.CREATE,
 						StandardOpenOption.TRUNCATE_EXISTING
 				);
-				writer.write("<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\n\t<modelVersion>4.0.0</modelVersion>\n\n\t<groupId>io.github.guiritter</groupId>\n\t<artifactId>");
+				writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n\t<modelVersion>4.0.0</modelVersion>\n\n\t<groupId>io.github.guiritter</groupId>\n\t<artifactId>");
 				writer.write(artifactIdField.getText());
 				writer.write("</artifactId>\n\t<version>1.0.0</version>\n\t<packaging>jar</packaging>\n\n\t<name>");
 				writer.write(humanReadableNameField.getText());
