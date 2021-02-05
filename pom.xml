@@ -4,7 +4,7 @@
 
 	<groupId>io.github.guiritter</groupId>
 	<artifactId>executable-project-generator</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 
 	<name>Executable Project Generator</name>
@@ -56,7 +56,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
 				<configuration>
-					<!-- Compile java 7 compatible bytecode -->
+					<!-- Compile java 14 compatible bytecode -->
 					<source>14</source>
 					<target>14</target>
 				</configuration>
