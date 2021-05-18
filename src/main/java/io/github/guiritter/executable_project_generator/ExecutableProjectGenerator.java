@@ -32,6 +32,8 @@ public class ExecutableProjectGenerator{
 
 	private static final int FULL_PADDING = 2 * HALF_PADDING;
 
+	private static final String JAVA_VERSION = "16";
+
 	static {
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		JDialog.setDefaultLookAndFeelDecorated(true);
@@ -153,11 +155,11 @@ public class ExecutableProjectGenerator{
 				writer.write(descriptionField.getText());
 				writer.write("</description>\n\t<url>https://github.com/GuiRitter/");
 				writer.write(mainClassField.getText());
-				writer.write("</url>\n\n\t<licenses>\n\t\t<license>\n\t\t\t<name>MIT License</name>\n\t\t\t<url>http://www.opensource.org/licenses/mit-license.php</url>\n\t\t</license>\n\t</licenses>\n\n\t<developers>\n\t\t<developer>\n\t\t\t<name>Guilherme Alan Ritter</name>\n\t\t\t<email>gui.a.ritter@gmail.com</email>\n\t\t</developer>\n\t</developers>\n\n\t<properties>\n\t\t<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n\t\t<maven.compiler.source>14</maven.compiler.source>\n\t\t<maven.compiler.target>14</maven.compiler.target>\n\t\t<exec.mainClass>io.github.guiritter.");
+				writer.write("</url>\n\n\t<licenses>\n\t\t<license>\n\t\t\t<name>MIT License</name>\n\t\t\t<url>http://www.opensource.org/licenses/mit-license.php</url>\n\t\t</license>\n\t</licenses>\n\n\t<developers>\n\t\t<developer>\n\t\t\t<name>Guilherme Alan Ritter</name>\n\t\t\t<email>gui.a.ritter@gmail.com</email>\n\t\t</developer>\n\t</developers>\n\n\t<properties>\n\t\t<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n\t\t<maven.compiler.source>" + JAVA_VERSION + "</maven.compiler.source>\n\t\t<maven.compiler.target>" + JAVA_VERSION + "</maven.compiler.target>\n\t\t<exec.mainClass>io.github.guiritter.");
 				writer.write(packageField.getText());
 				writer.write(".");
 				writer.write(mainClassField.getText());
-				writer.write("</exec.mainClass>\n\t</properties>\n\n\t<repositories>\n\t\t<repository>\n\t\t\t<id>jitpack.io</id>\n\t\t\t<url>https://jitpack.io</url>\n\t\t</repository>\n\t</repositories>\n\n\t<dependencies>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.apache.maven.plugins</groupId>\n\t\t\t\t<artifactId>maven-compiler-plugin</artifactId>\n\t\t\t\t<version>3.2</version>\n\t\t\t\t<configuration>\n\t\t\t\t\t<!-- Compile java 14 compatible bytecode -->\n\t\t\t\t\t<source>14</source>\n\t\t\t\t\t<target>14</target>\n\t\t\t\t</configuration>\n\t\t\t</plugin>\n\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.apache.maven.plugins</groupId>\n\t\t\t\t<artifactId>maven-assembly-plugin</artifactId>\n\t\t\t\t<executions>\n\t\t\t\t\t<execution>\n\t\t\t\t\t\t<phase>package</phase>\n\t\t\t\t\t\t<goals>\n\t\t\t\t\t\t\t<goal>single</goal>\n\t\t\t\t\t\t</goals>\n\t\t\t\t\t\t<configuration>\n\t\t\t\t\t\t\t<archive>\n\t\t\t\t\t\t\t\t<manifest>\n\t\t\t\t\t\t\t\t\t<mainClass>io.github.guiritter.");
+				writer.write("</exec.mainClass>\n\t</properties>\n\n\t<repositories>\n\t\t<repository>\n\t\t\t<id>jitpack.io</id>\n\t\t\t<url>https://jitpack.io</url>\n\t\t</repository>\n\t</repositories>\n\n\t<dependencies>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.apache.maven.plugins</groupId>\n\t\t\t\t<artifactId>maven-compiler-plugin</artifactId>\n\t\t\t\t<version>3.2</version>\n\t\t\t\t<configuration>\n\t\t\t\t\t<!-- Compile java " + JAVA_VERSION + " compatible bytecode -->\n\t\t\t\t\t<source>" + JAVA_VERSION + "</source>\n\t\t\t\t\t<target>" + JAVA_VERSION + "</target>\n\t\t\t\t</configuration>\n\t\t\t</plugin>\n\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.apache.maven.plugins</groupId>\n\t\t\t\t<artifactId>maven-assembly-plugin</artifactId>\n\t\t\t\t<executions>\n\t\t\t\t\t<execution>\n\t\t\t\t\t\t<phase>package</phase>\n\t\t\t\t\t\t<goals>\n\t\t\t\t\t\t\t<goal>single</goal>\n\t\t\t\t\t\t</goals>\n\t\t\t\t\t\t<configuration>\n\t\t\t\t\t\t\t<archive>\n\t\t\t\t\t\t\t\t<manifest>\n\t\t\t\t\t\t\t\t\t<mainClass>io.github.guiritter.");
 				writer.write(packageField.getText());
 				writer.write(".");
 				writer.write(mainClassField.getText());
