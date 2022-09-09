@@ -32,7 +32,7 @@ public class ExecutableProjectGenerator{
 
 	private static final int FULL_PADDING = 2 * HALF_PADDING;
 
-	private static final String JAVA_VERSION = "16";
+	private static final String JAVA_VERSION = "17";
 
 	static {
 		JFrame.setDefaultLookAndFeelDecorated(true);
